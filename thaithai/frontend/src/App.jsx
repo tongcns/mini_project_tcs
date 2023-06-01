@@ -18,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
       </Routes>
-      {/* <Home /> */}
+      <Home />
       {/* <Sidebar /> */}
     </BrowserRouter>
   );
