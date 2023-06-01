@@ -12,11 +12,12 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import Axios from "../AxiosInstance";
 
 const styles = {
   backgroundColor: "#E9E9E9",
@@ -32,6 +33,7 @@ const bull = (
 const theme = createTheme();
 
 export default function BasicCard() {
+  const navigate = useNavigate();
   const [formData, setFormData] = React.useState({
     email: "",
     password: "",
@@ -45,11 +47,22 @@ export default function BasicCard() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formData);
+  
+    try {
+      const response = await Axios.post("http://localhost:3000/auth/login", formData);
+      console.log(response.data);
+      localStorage.setItem("userId",response.data.userId)
+      navigate("/home");
+    } catch (error) {
+      console.log(error);
+      // Handle errors
+    }
   };
-
+  
+  
   return (
     <div style={styles}>
       <div className="page-container">

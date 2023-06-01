@@ -17,10 +17,10 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import Button from "@mui/material/Button";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Drawer from "@mui/material/Drawer";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import Sidebar from "./Sidebar";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useNavigate } from "react-router-dom";
 
-const navItems = ["Home", "Favorite", "Help"];
+// const navItems = ["Home", "Favorite", "Help"];
 
 // Search bar & hover
 const Search = styled("div")(({ theme }) => ({
@@ -63,6 +63,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [isDrawerOpen, setDrawerOpen] = React.useState(false);
@@ -108,8 +109,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={() => navigate("/Account")}>My Account</MenuItem>
+      <MenuItem onClick={() => navigate("/login")}>Log out</MenuItem>
     </Menu>
   );
 
@@ -194,12 +195,18 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          {/* <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: "#fff" }}>
                 {item}
               </Button>
             ))}
+          </Box> */}
+
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button sx={{ color: "#fff" }} onClick={() => navigate("/home")}> Home</Button>
+            <Button sx={{ color: "#fff" }} onClick={() => navigate("/favorite")}> Favorite</Button>
+            <Button sx={{ color: "#fff" }} onClick={() => navigate("/help")}> Help</Button>
           </Box>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -245,33 +252,48 @@ export default function PrimarySearchAppBar() {
         variant="temporary"
       >
         <Box sx={{ width: 280 }}>
-          <MenuItem style={{ backgroundColor: "black", height: 65 }}>
+          <MenuItem
+            style={{
+              backgroundColor: "black",
+              height: 65,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 color: "white",
               }}
             >
               Thaiไทย
             </Typography>
           </MenuItem>
-          <MenuItem sx={{display:'flex', justifyContent:'space-between'}}>
-            <p>Food</p> 
-            <ChevronRightIcon/>
+
+          <Box onClick={() => navigate("/home")} >
+          <MenuItem sx={{ display: "flex", justifyContent: "space-between" }}>
+            <p>Food</p>
+            <ChevronRightIcon />
           </MenuItem>
-          <MenuItem sx={{display:'flex', justifyContent:'space-between'}}>
+          </Box>
+
+          <Box onClick={() => navigate("/home")} >
+          <MenuItem sx={{ display: "flex", justifyContent: "space-between" }}>
             <p>Utensils</p>
-            <ChevronRightIcon/>
+            <ChevronRightIcon />
           </MenuItem>
-          <MenuItem sx={{display:'flex', justifyContent:'space-between'}}>
+          </Box>
+
+          <Box onClick={() => navigate("/home")} >
+          <MenuItem sx={{ display: "flex", justifyContent: "space-between" }}>
             <p>Collectibles</p>
-            <ChevronRightIcon/>
+            <ChevronRightIcon />
           </MenuItem>
+          </Box>
+          
         </Box>
       </Drawer>
 
