@@ -5,7 +5,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -13,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -119,11 +119,20 @@ export default function BasicCard() {
                       type="submit"
                       fullWidth
                       variant="contained"
-                      sx={{ mt: 3, mb: 2 }}
+                      sx={{ mt: 2, mb: 2 }}
                       style={{ background: "#39487E" }}
                     >
                       Log In
                     </Button>
+                    <Box sx={{ display: "flex", alignItems: "center" , justifyContent: "center" }}>
+                      <Typography>
+                        Don't have an account?
+                      </Typography>
+                      <Link to="/Signup">
+                        Sign Up
+                      </Link>
+                    </Box>
+
                   </Box>
                 </Box>
               </Container>

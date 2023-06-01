@@ -5,7 +5,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -14,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Axios from "../AxiosInstance"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SignInSide() {
   const navigate = useNavigate();
@@ -214,19 +214,15 @@ function SignInSide() {
                 <Grid item xs></Grid>
                 <Grid item></Grid>
               </Grid>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                align="center"
-                sx={{ mt: 5 }}
-              >
-                {"Copyright © "}
-                <Link color="inherit" href="https://mui.com/">
-                  Thaiไทย
-                </Link>{" "}
-                {new Date().getFullYear()}
-                {"."}
-              </Typography>
+              <Box sx={{ display: "flex", alignItems: "center" , justifyContent: "center" }}>
+                      <Typography>
+                        Already have an account?   
+                      </Typography>
+                      <Link to="/">
+                        Log in
+                      </Link>
+                    </Box>
+
             </Box>
           </Box>
         </Grid>
