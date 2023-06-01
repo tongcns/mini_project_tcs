@@ -24,7 +24,7 @@ export default function Home() {
         WHAT'S HOT
       </Typography>
       <NewCard />
-      <Typography style={{ marginLeft: "40px", marginTop: "20px", fontWeight: "700", fontSize: "30px", marginBottom: "-15px"}}>
+      <Typography style={{ marginLeft: "40px", marginTop: "21px", fontWeight: "700", fontSize: "30px", marginBottom: "-15px"}}>
         NEW ARRIVALS
       </Typography>
       <NewCard />
