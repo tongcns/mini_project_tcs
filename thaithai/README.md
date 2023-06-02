@@ -14,7 +14,7 @@ delete account | delete the account |
 ## To run the frontend and backend
 
 #### Frontend / Backend
------------------
+
 ```
 npm start
 ```
