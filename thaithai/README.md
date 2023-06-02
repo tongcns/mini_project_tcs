@@ -11,9 +11,9 @@ view product | view a product
 delete account | delete the account |
 
 
-### `To run the frontend and backend`
+## To run the frontend and backend
 
-Frontend / Backend
+#### Frontend / Backend
 -----------------
 ```
 npm start
