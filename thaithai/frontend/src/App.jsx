@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import { Account } from "./pages/Account";
 import Favorite from "./pages/Favorite";
 import Help from "./pages/Help";
+import Food from "./pages/Food";
+import Utensils from "./pages/Utensils";
+import Collectibles from "./pages/Collectibles";
+
 import "./App.css";
 
 
@@ -22,6 +26,9 @@ function App() {
         <Route path="/account" element={<Account/>} />
         <Route path="/favorite" element={<Favorite/>} />
         <Route path="/help" element={<Help/>} />
+        <Route path="/food" element={<Food/>} />
+        <Route path="/utensils" element={<Utensils/>} />
+        <Route path="/collectibles" element={<Collectibles/>} />
       </Routes>
 
 

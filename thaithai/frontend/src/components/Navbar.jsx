@@ -273,27 +273,27 @@ export default function PrimarySearchAppBar() {
             </Typography>
           </MenuItem>
 
-          <Box onClick={() => navigate("/home")} >
+          <Box onClick={() => navigate("/food")} >
           <MenuItem sx={{ display: "flex", justifyContent: "space-between" }}>
             <p>Food</p>
             <ChevronRightIcon />
           </MenuItem>
           </Box>
 
-          <Box onClick={() => navigate("/home")} >
+          <Box onClick={() => navigate("/utensils")} >
           <MenuItem sx={{ display: "flex", justifyContent: "space-between" }}>
             <p>Utensils</p>
             <ChevronRightIcon />
           </MenuItem>
           </Box>
 
-          <Box onClick={() => navigate("/home")} >
+          <Box onClick={() => navigate("/collectibles")} >
           <MenuItem sx={{ display: "flex", justifyContent: "space-between" }}>
             <p>Collectibles</p>
             <ChevronRightIcon />
           </MenuItem>
           </Box>
-          
+
         </Box>
       </Drawer>
 
