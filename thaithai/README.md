@@ -22,4 +22,11 @@ npm start
 ## API endpoints
 
 ### Login
-URL ``POST/login``
+URL ``POST /auth/login``
+
+#### Request Body
+
+Parameter  | Type  |  Description |
+----- | ----- | ----- | 
+email | 	string |	User's email address
+password |	string |  User's password
