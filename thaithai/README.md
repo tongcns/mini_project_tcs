@@ -4,10 +4,10 @@ Thaiไทย is a website that created to be an e-commerce platform for selling
 
 ## Technology Stack
 
-**Front-end: React.js**<br />
-**Back-end: Express.js**<br />
-**Database: MariaDB**<br />
-**Other: MUI and you can find others in package.js**<br />
+* Front-end: React.js<br />
+* Back-end: Express.js<br />
+* Database: MariaDB<br />
+* Other: MUI and you can find others in package.js<br />
 
 ## Features
 
