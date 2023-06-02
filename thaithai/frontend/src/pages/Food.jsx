@@ -14,7 +14,7 @@ export default function Home() {
       <header style={{ marginTop: "60px" }}>
         <img style={{ width: "100%" }}
           src={
-            "https://otop.cdd.go.th/web/image/1748722-b8b6f7f3/Bigdatabaner2.3.jpeg"
+            "https://www.roilaan.com/wp-content/uploads/2022/03/Banner-Destop-Otop-1400x431.jpg"
           }
           alt="Header Image"
         />
