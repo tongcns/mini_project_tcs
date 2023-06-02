@@ -137,7 +137,7 @@ app.post("/auth/login", (req, res) => {
   );
 });
 
-app.get("/1", (_req, res) => {
+app.get("/checkuser", (_req, res) => {
   connection.query("SELECT * FROM user", (err, result) => {
     if (err) {
       console.log("error");
