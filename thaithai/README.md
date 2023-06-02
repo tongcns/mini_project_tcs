@@ -5,14 +5,17 @@ Thaiไทย is a website that created to be an e-commerce platform for selling
 
 Features  | Description  |  
 ----- | ----- | 
-register | register to the website | 
+register | create the account |
 login | login to the website | 
-create account | create the account |
 view product | view a product
 delete account | delete the account |
 
 
-### `npm start`
+### `To run the frontend and backend`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Frontend / Backend
+-----------------
+```
+npm start
+```
+
