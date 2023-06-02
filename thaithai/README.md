@@ -19,3 +19,7 @@ delete account | delete the account |
 npm start
 ```
 
+## API endpoints
+
+### Login
+URL ``POST/login``
